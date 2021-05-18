@@ -1,0 +1,462 @@
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[StyleBox["ALAS: Atomic Levels And Spectra",
+ FontSize->
+  36]], "Title",ExpressionUUID->"4f97aa06-5237-417d-a3de-abc5fa8e4b58"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "\[Copyright] Emilio Pisanty (2021). Licensed under GPL and CC BY-SA.\n",
+ StyleBox[" ",
+  FontSize->3],
+ "\nThis notebook generates the package file for the ALAS package. For \
+updates and additional information, go to https://github.com/episanty/ALAS."
+}], "Text",
+ CellGroupingRules->{
+  GroupTogetherGrouping, 
+   10000.},ExpressionUUID->"6ac175a7-f178-4dfe-9bdc-458722381b12"],
+
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"This", " ", "is", " ", "the", " ", "ALAS", " ", "package"}], ",", 
+   " ", 
+   RowBox[{"\[Copyright]", " ", "Emilio", " ", "Pisanty", " ", 
+    RowBox[{
+     RowBox[{"(", "2021", ")"}], ".", " ", "For"}], " ", "the", " ", 
+    "notebook", " ", "that", " ", "generated", " ", "this", " ", "package", 
+    " ", "file", " ", "and", " ", "additional", " ", "documentaion"}], ",", 
+   " ", 
+   RowBox[{
+    RowBox[{"see", " ", 
+     RowBox[{"https", ":"}]}], "//", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"github", ".", "com"}], "/", "episanty"}], "/", 
+     RowBox[{"ALAS", "."}]}]}]}], "\[IndentingNewLine]", "*)"}]], "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ InitializationCell->
+  True,ExpressionUUID->"82d38177-9df9-4b82-9d60-a29240b5c273"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Readme", "Section",
+ CellTags->
+  "Introduction",ExpressionUUID->"c6192770-807e-4c6d-bd69-7a28378f3924"],
+
+Cell[CellGroupData[{
+
+Cell["Specifications", \
+"Subsection",ExpressionUUID->"6d709491-2e85-4a20-92d1-a0c461ce133a"],
+
+Cell["(placeholder text)", \
+"Text",ExpressionUUID->"573bc852-ad26-4d6f-a777-1b0aaf2d6d36"]
+}, Open  ]],
+
+Cell["Implementation notes", \
+"Subsection",ExpressionUUID->"50c5060d-5941-402a-95ff-4d3813a25538"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Package admin", \
+"Section",ExpressionUUID->"63ce1fac-976b-4ffb-9096-45068b912d68"],
+
+Cell[CellGroupData[{
+
+Cell["Initialization", \
+"Subsection",ExpressionUUID->"5aeda15b-76fe-4aed-a4a6-75764c3d3231"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"BeginPackage", "[", "\"\<ALAS`\>\"", "]"}], ";"}]], "Input",
+ InitializationCell->
+  True,ExpressionUUID->"d8194a12-20ba-4527-9da4-5c21f77858c8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Package admin", \
+"Subsection",ExpressionUUID->"b342e1b8-f293-4421-bf51-03eecc098c29"],
+
+Cell[CellGroupData[{
+
+Cell["Version managing", "Subsubsection",
+ CellTags->
+  "version-section",ExpressionUUID->"4a58faea-5e89-4a18-8638-f58dbf15ff2e"],
+
+Cell["\<\
+The variable $ALASVersion gives the version of the ALAS package currently \
+loaded as well as its timestamp\
+\>", "Text",ExpressionUUID->"3cc4e9c7-4560-4484-b6a1-3feb4291ed7c"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"$ALASVersion", "::", "usage"}], "=", 
+   "\"\<$ALASVersion prints the current version of the ALAS package in use \
+and its timestamp.\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"$ALASTimestamp", "::", "usage"}], "=", 
+   "\"\<$ALASTimestamp prints the timestamp of the current version of the \
+ALAS package.\>\""}], ";"}]}], "Input",
+ InitializationCell->
+  True,ExpressionUUID->"aa97ee0f-f35a-441d-9482-ce45b1a816f6"],
+
+Cell["\<\
+The timestamp is updated every time this notebook is saved, via an \
+appropriate notebook option which is set by the code below.\
+\>", "Text",ExpressionUUID->"887427dc-d969-4eef-9ca3-6df9cab14874"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SetOptions", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"EvaluationNotebook", "[", "]"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"NotebookEventActions", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"\"\<MenuCommand\>\"", ",", "\"\<Save\>\""}], "}"}], 
+        "\[RuleDelayed]", 
+        RowBox[{"(", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"NotebookWrite", "[", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Cells", "[", 
+              RowBox[{"CellTags", "\[Rule]", "\"\<version-timestamp\>\""}], 
+              "]"}], "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"Cell", "[", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"BoxData", "[", 
+               RowBox[{"RowBox", "[", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<$ALASTimestamp=\\\"\>\"", "<>", 
+                  RowBox[{"DateString", "[", "]"}], "<>", 
+                  "\"\<\\\";\\nEnd[];\>\""}], "}"}], "]"}], "]"}], 
+              "\[IndentingNewLine]", ",", "\"\<Input\>\"", ",", 
+              RowBox[{"InitializationCell", "\[Rule]", "True"}], ",", 
+              RowBox[{"CellTags", "\[Rule]", "\"\<version-timestamp\>\""}]}], 
+             "\[IndentingNewLine]", "]"}], ",", "None", ",", 
+            RowBox[{"AutoScroll", "\[Rule]", "False"}]}], "]"}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"NotebookSave", "[", "]"}]}], "\[IndentingNewLine]", 
+         ")"}]}], ",", 
+       RowBox[{"PassEventsDown", "\[Rule]", "True"}]}], "}"}]}]}], 
+   "\[IndentingNewLine]", "]"}], ";"}]], "Input",
+ CellLabel->
+  "In[181]:=",ExpressionUUID->"9fc2d5fa-1617-4717-8d93-fc3b81379664"],
+
+Cell["To reset this behaviour to normal, evaluate the cell below", \
+"Text",ExpressionUUID->"bc795509-3913-49b6-84f3-de50f36f2b1a"],
+
+Cell[BoxData[
+ RowBox[{"SetOptions", "[", 
+  RowBox[{
+   RowBox[{"EvaluationNotebook", "[", "]"}], ",", 
+   RowBox[{"NotebookEventActions", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<MenuCommand\>\"", ",", "\"\<Save\>\""}], "}"}], 
+       "\[RuleDelayed]", 
+       RowBox[{"(", 
+        RowBox[{"NotebookSave", "[", "]"}], ")"}]}], ",", 
+      RowBox[{"PassEventsDown", "\[Rule]", "True"}]}], "}"}]}]}], 
+  "]"}]], "Input",ExpressionUUID->"45760a97-ec43-42f5-a401-6d3b7f33f832"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Version number and timestamp", \
+"Subsubsection",ExpressionUUID->"2ac2d3ad-8207-436c-afb8-bc0ae16d4c35"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Begin", "[", "\"\<`Private`\>\"", "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"$ALASVersion", ":=", 
+   RowBox[{"\"\<ALAS v0.1, \>\"", "<>", "$ALASTimestamp"}]}], ";"}]}], "Input",
+ InitializationCell->
+  True,ExpressionUUID->"90617182-59d4-4545-b4c7-e01a2308359e"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"$ALASTimestamp", "=", "\"\<Tue 18 May 2021 13:16:21\>\""}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"End", "[", "]"}], ";"}]}], "Input",
+ InitializationCell->True,
+ CellTags->
+  "version-timestamp",ExpressionUUID->"06547887-bc76-45d3-879f-e166757cac76"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Directory", \
+"Subsubsection",ExpressionUUID->"d265a8f6-abd3-4556-b1e7-2a394098c33f"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"$ALASDirectory", "::", "usage"}], "=", 
+   "\"\<$ALASDirectory is the directory where the current ALAS package \
+instance is located.\>\""}], ";"}]], "Input",
+ InitializationCell->
+  True,ExpressionUUID->"c87f6883-8e5e-4a34-a1b9-2f3cdfa24230"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Begin", "[", "\"\<`Private`\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"With", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"softLinkTestString", "=", 
+      RowBox[{"StringSplit", "[", 
+       RowBox[{
+        RowBox[{"StringJoin", "[", 
+         RowBox[{"ReadList", "[", 
+          RowBox[{
+           RowBox[{"\"\<! ls -la \>\"", "<>", 
+            RowBox[{"StringReplace", "[", 
+             RowBox[{"$InputFileName", ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\< \>\"", "\[Rule]", "\"\<\\\\ \>\""}], "}"}]}], 
+             "]"}]}], ",", "String"}], "]"}], "]"}], ",", "\"\< -> \>\""}], 
+       "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Length", "[", "softLinkTestString", "]"}], ">", "1"}], ",", 
+      RowBox[{"(*", 
+       RowBox[{
+       "Testing", " ", "in", " ", "case", " ", "$InputFileName", " ", "is", 
+        " ", "a", " ", "soft", " ", "link", " ", "to", " ", "the", " ", 
+        "actual", " ", 
+        RowBox[{"directory", "."}]}], "*)"}], "\[IndentingNewLine]", 
+      RowBox[{"$ALASDirectory", "=", 
+       RowBox[{"StringReplace", "[", 
+        RowBox[{
+         RowBox[{"DirectoryName", "[", 
+          RowBox[{
+          "softLinkTestString", "\[LeftDoubleBracket]", "2", 
+           "\[RightDoubleBracket]"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"\"\< \>\"", "\[Rule]", "\"\<\\\\ \>\""}], "}"}]}], "]"}]}],
+       ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"$ALASDirectory", "=", 
+        RowBox[{"StringReplace", "[", 
+         RowBox[{
+          RowBox[{"DirectoryName", "[", "$InputFileName", "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"\"\< \>\"", "\[Rule]", "\"\<\\\\ \>\""}], "}"}]}], 
+         "]"}]}], ";"}]}], "\[IndentingNewLine]", "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"End", "[", "]"}], ";"}]}], "Input",
+ InitializationCell->
+  True,ExpressionUUID->"f4003c50-c4bf-43a7-96de-6f1292ddff7e"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Git commit hash and message", \
+"Subsubsection",ExpressionUUID->"b01571eb-22a0-4ae9-bcdf-68217bd8bd00"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"$ALASCommit", "::", "usage"}], "=", 
+   "\"\<$ALASCommit returns the git commit log at the location of the ALAS \
+package if there is one.\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"$ALASCommit", "::", "OS"}], "=", 
+   "\"\<$ALASCommit has only been tested on Linux.\>\""}], ";"}]}], "Input",
+ InitializationCell->
+  True,ExpressionUUID->"fce25619-8923-4995-9cae-ebb712b0cd01"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Begin", "[", "\"\<`Private`\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"$ALASCommit", ":=", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"$OperatingSystem", "\[NotEqual]", "\"\<Unix\>\""}], ",", 
+       RowBox[{"Message", "[", 
+        RowBox[{"$ALASCommit", "::", "OS"}], "]"}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"StringJoin", "[", 
+      RowBox[{"Riffle", "[", 
+       RowBox[{
+        RowBox[{"ReadList", "[", 
+         RowBox[{
+          RowBox[{
+          "\"\<!cd \>\"", "<>", "$ALASDirectory", "<>", 
+           "\"\< && git log -1\>\""}], ",", "String"}], "]"}], ",", 
+        RowBox[{"{", "\"\<\\n\>\"", "}"}]}], "]"}], "]"}]}], ")"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"End", "[", "]"}], ";"}]}], "Input",
+ InitializationCell->
+  True,ExpressionUUID->"56b69d2c-3f13-4848-bcc7-6db05f85bf58"]
+}, Closed]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Package code", \
+"Section",ExpressionUUID->"3844a50e-ebb3-4a6c-8d34-f82b94b045bd"],
+
+Cell[CellGroupData[{
+
+Cell["Section", \
+"Subsection",ExpressionUUID->"f2638bd6-bcab-492c-9af4-2d0a179c8816"],
+
+Cell["Function", \
+"Subsubsection",ExpressionUUID->"cd7f5611-c0cd-4618-914c-f80a6caf1d05"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Package closure", \
+"Section",ExpressionUUID->"9ef34194-5bc5-402e-b25a-b6b648543098"],
+
+Cell[CellGroupData[{
+
+Cell["End of package", \
+"Subsubsection",ExpressionUUID->"08b5aa74-0de0-4690-976b-1c4972ab6314"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EndPackage", "[", "]"}], ";"}]], "Input",
+ InitializationCell->True,
+ CellLabel->"In[191]:=",ExpressionUUID->"7bfde5e2-e60e-49b0-9216-395b306e3c3c"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Add to distributed contexts", \
+"Subsubsection",ExpressionUUID->"627f2346-484c-48d4-9453-1b9800679ff6"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DistributeDefinitions", "[", "\"\<ALAS`\>\"", "]"}], 
+  ";"}]], "Input",
+ InitializationCell->
+  True,ExpressionUUID->"0b59eb5f-39e5-4fe3-a624-8b4b88bac2fa"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Benchmarking", \
+"Section",ExpressionUUID->"648a9a75-6e57-4306-a392-3730781abb93"],
+
+Cell["Section", \
+"Subsection",ExpressionUUID->"0b2db5a0-4f02-444c-a355-bb877c7fa104"]
+}, Open  ]],
+
+Cell["Testing", \
+"Section",ExpressionUUID->"9d571d65-343e-4a3b-a3eb-ed358aa0e459"]
+}, Open  ]]
+},
+AutoGeneratedPackage->Automatic,
+NotebookEventActions->{{"MenuCommand", "Save"} :> (NotebookWrite[
+     Part[
+      Cells[CellTags -> "version-timestamp"], 1], 
+     Cell[
+      BoxData[
+       RowBox[{
+         StringJoin["$ALASTimestamp=\"", 
+          DateString[], "\";\nEnd[];"]}]], "Input", InitializationCell -> 
+      True, CellTags -> "version-timestamp"], None, AutoScroll -> False]; 
+   NotebookSave[]), PassEventsDown -> True},
+WindowSize->{1152., 586.5},
+WindowMargins->{{
+  Automatic, -4.7999999999999545`}, {-4.7999999999999545`, Automatic}},
+PrintingCopies->1,
+PrintingStartingPageNumber->1,
+PrintingPageRange->{Automatic, Automatic},
+PageHeaders->{{
+   Cell[
+    TextData[{"Emilio", " ", "Pisanty"}], "Header", 
+    CellMargins -> {{0, Inherited}, {Inherited, Inherited}}], None, 
+   Cell[
+    TextData[{
+     "ALAS", ":", " ", "Atomic", " ", "Levels", " ", "And", " ", "Spectra", 
+      "|", "   ", 
+      StyleBox[
+       CounterBox["Page"], "PageNumber"]}], "Header", 
+    CellMargins -> {{Inherited, 0}, {Inherited, Inherited}}]}, {
+   Cell[
+    TextData[{"Emilio", " ", "Pisanty"}], "Header", 
+    CellMargins -> {{0, Inherited}, {Inherited, Inherited}}], None, 
+   Cell[
+    TextData[{
+     "ALAS", ":", " ", "Atomic", " ", "Levels", " ", "And", " ", "Spectra", 
+      "|", "   ", 
+      StyleBox[
+       CounterBox["Page"], "PageNumber"]}], "Header", 
+    CellMargins -> {{Inherited, 0}, {Inherited, Inherited}}]}},
+PageFooters->{{
+   Cell[
+    TextData[{
+     "https", ":", "//", "github", ".", "com", "/", "episanty", "/", "ALAS"}],
+     "Footer", CellMargins -> {{0, Inherited}, {Inherited, Inherited}}], None,
+    None}, {
+   Cell[
+    TextData[{
+     "https", ":", "//", "github", ".", "com", "/", "episanty", "/", "ALAS"}],
+     "Footer", CellMargins -> {{0, Inherited}, {Inherited, Inherited}}], None,
+    None}},
+PageHeaderLines->{False, False},
+PageFooterLines->{False, False},
+PrintingOptions->{"FacingPages"->True,
+"FirstPageFace"->Right,
+"FirstPageFooter"->True,
+"FirstPageHeader"->False,
+"PaperOrientation"->"Portrait",
+"PaperSize"->{594.75, 842.25},
+"PostScriptOutputFile"->"~/Desktop/print.pdf",
+"PrintingMargins"->{{19.84251968503, 19.84251968503}, {72., 72.}}},
+PrivateNotebookOptions->{"FileOutlineCache"->False},
+ShowSelection->True,
+TaggingRules->{
+ "WelcomeScreenSettings" -> {"FEStarting" -> False}, "TryRealOnly" -> False},
+TrackCellChangeTimes->False,
+SpellingDictionaries->{"CorrectWords"->{
+ "subpackage", "Pisanty", "subpackages"}},
+Background->None,
+FrontEndVersion->"12.2 for Microsoft Windows (64-bit) (December 12, 2020)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "Default.nb"]], 
+   Cell[
+    StyleData["Code"], FontWeight -> "Plain", FontSlant -> "Plain", 
+    FontTracking -> "Plain", 
+    FontVariations -> {
+     "Outline" -> False, "Shadow" -> False, "StrikeThrough" -> False, 
+      "Underline" -> False}]}, Visible -> False, FrontEndVersion -> 
+  "12.2 for Microsoft Windows (64-bit) (December 12, 2020)", StyleDefinitions -> 
+  "PrivateStylesheetFormatting.nb"],
+ExpressionUUID->"0068b283-5296-4e9a-909d-6a8830b1cd95"
+]
+

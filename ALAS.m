@@ -40,7 +40,7 @@ $ALASVersion:="ALAS v0.1, "<>$ALASTimestamp;
 
 
 (* ::Input::Initialization:: *)
-$ALASTimestamp="Tue 18 May 2021 13:16:21";
+$ALASTimestamp="Wed 19 May 2021 13:57:35";
 End[];
 
 
@@ -76,6 +76,112 @@ EndPackage[];
 
 (* ::Input::Initialization:: *)
 DistributeDefinitions["ALAS`"];
+
+
+(* ::Input::Initialization:: *)
+$ASDLevelsBaseURL="https://physics.nist.gov/cgi-bin/ASD/energy1.pl?";
+$ASDLinesBaseURL="https://physics.nist.gov/cgi-bin/ASD/lines1.pl?";
+
+
+(* ::Input::Initialization:: *)
+Options[ASDLevelQueryURL]={
+"submit"->"Retrieve+Data",
+"units"->"eV",
+"format"->"CSV",
+"multiplet_ordered"->"0",(*0 for 'Term ordered', 1 for 'Energy ordered'*)
+(*Principal configuration*)"conf_out"->True,
+(*Principal term*)"term_out"->True,
+(*Level, i.e. energy*)"level_out"->True,
+(*Uncertainty*)"unc_out"->True,
+(*J*)"j_out"->True,
+(*g*)"g_out"->True,
+(*Land\[EAcute]-g*)"lande_out"->True,
+(*Leading percentages*)"perc_out"->True,
+(*Bibliographic references*)"biblio"->True,
+(*Level splitting*)"splitting"->False
+};
+
+
+(* ::Input::Initialization:: *)
+ASDOptionHandler[_][value_]:=ReplaceAll[value,{True->"on",False->""}]
+ASDOptionHandler["unc_out"|"splitting"][value_]:=ReplaceAll[value,{True->"1",False->""}]
+ASDOptionHandler["units"][value_]:=ReplaceAll[value,{"cm-1"->"1","eV"->"2","Rydberg"->"3"}]
+ASDOptionHandler["format"][value_]:=ReplaceAll[value,{"HTML"->"0","ASCII"->"1","CSV"->"2","Tab-delimited"->"3"}]
+
+
+(* ::Input::Initialization:: *)
+ASDLevelQueryURL[species_,opts:OptionsPattern[]]:=ASDLevelQueryURL[species,0,opts]
+ASDLevelQueryURL[species_,charge_,OptionsPattern[]]:=StringJoin[
+Flatten[Join[
+{$ASDLevelsBaseURL},
+Riffle[Join[
+{{"spectrum","=",FormatSpecies[species,charge]}},
+Table[
+ReplaceAll[
+{option,"=",ASDOptionHandler[option][OptionValue[option]]}
+,{{_,_,""}->{}}](*remove options set to False, which have empty strings at the end here*)
+,{option,Options[ASDLevelQueryURL][[All,1]]}]
+],{"&"}]]
+]]
+
+
+(* ::Input::Initialization:: *)
+Options[ASDLevelQuery]={
+"submit"->"Retrieve+Data",
+"units"->"eV",
+"format"->"CSV",
+"multiplet_ordered"->"0",(*0 for 'Term ordered', 1 for 'Energy ordered'*)
+(*Principal configuration*)"conf_out"->True,
+(*Principal term*)"term_out"->True,
+(*Level, i.e. energy*)"level_out"->True,
+(*Uncertainty*)"unc_out"->True,
+(*J*)"j_out"->True,
+(*g*)"g_out"->True,
+(*Land\[EAcute]-g*)"lande_out"->True,
+(*Leading percentages*)"perc_out"->True,
+(*Bibliographic references*)"biblio"->True,
+(*Level splitting*)"splitting"->False
+};
+
+
+(* ::Input::Initialization:: *)
+ASDLevelQuery[species_,opts:OptionsPattern[]]:=ASDLevelQuery[species,0,opts]
+ASDLevelQuery[species_,charge_,OptionsPattern[]]:=Flatten[Join[
+{"spectrum"->FormatSpecies[species,charge]},
+Table[
+ReplaceAll[
+option->ASDOptionHandler[option][OptionValue[option]]
+,{Rule[_,""]->{}}](*remove options set to False, which have empty strings at the end here*)
+,{option,Options[ASDLevelQuery][[All,1]]}]
+]]
+
+ASDLevelQuery["B",0]
+ASDLevelQuery["B",0,"units"->"cm-1","biblio"->False]
+
+
+(* ::Input::Initialization:: *)
+Options[ASDLevelRequest]=Options[ASDLevelQuery];
+
+ASDLevelRequest[species_,opts:OptionsPattern[]]:=ASDLevelRequest[species,0,opts]
+ASDLevelRequest[species_,charge_,OptionsPattern[]]:=HTTPRequest[URL[$ASDLevelsBaseURL],
+<|
+"Query"->ASDLevelQuery[species,charge]
+|>
+]
+
+ASDLevelRequest["B",0]
+
+
+(* ::Input::Initialization:: *)
+FormatSpecies[{species_,charge_}]:=FormatSpecies[species,charge]
+FormatSpecies[species_]:=FormatSpecies[species,0]
+FormatSpecies[species_,charge_]:=StringJoin[FormatSpeciesName[species],"+",ToString[charge]]
+
+FormatSpeciesName[species_]:=ElementData[species,"Abbreviation"]
+
+
+(* ::Input::Initialization:: *)
+SubmitASDQuery[queryURL_]:=SubmitASDQuery[queryURL]=URLRead[queryURL]
 
 
 

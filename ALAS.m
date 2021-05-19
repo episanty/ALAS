@@ -40,7 +40,7 @@ $ALASVersion:="ALAS v0.1, "<>$ALASTimestamp;
 
 
 (* ::Input::Initialization:: *)
-$ALASTimestamp="Wed 19 May 2021 13:57:35";
+$ALASTimestamp="Wed 19 May 2021 19:34:07";
 End[];
 
 
@@ -79,50 +79,15 @@ DistributeDefinitions["ALAS`"];
 
 
 (* ::Input::Initialization:: *)
-$ASDLevelsBaseURL="https://physics.nist.gov/cgi-bin/ASD/energy1.pl?";
-$ASDLinesBaseURL="https://physics.nist.gov/cgi-bin/ASD/lines1.pl?";
-
-
-(* ::Input::Initialization:: *)
-Options[ASDLevelQueryURL]={
-"submit"->"Retrieve+Data",
-"units"->"eV",
-"format"->"CSV",
-"multiplet_ordered"->"0",(*0 for 'Term ordered', 1 for 'Energy ordered'*)
-(*Principal configuration*)"conf_out"->True,
-(*Principal term*)"term_out"->True,
-(*Level, i.e. energy*)"level_out"->True,
-(*Uncertainty*)"unc_out"->True,
-(*J*)"j_out"->True,
-(*g*)"g_out"->True,
-(*Land\[EAcute]-g*)"lande_out"->True,
-(*Leading percentages*)"perc_out"->True,
-(*Bibliographic references*)"biblio"->True,
-(*Level splitting*)"splitting"->False
-};
+$ASDLevelsBaseURL="https://physics.nist.gov/cgi-bin/ASD/energy1.pl";
+$ASDLinesBaseURL="https://physics.nist.gov/cgi-bin/ASD/lines1.pl";
 
 
 (* ::Input::Initialization:: *)
 ASDOptionHandler[_][value_]:=ReplaceAll[value,{True->"on",False->""}]
 ASDOptionHandler["unc_out"|"splitting"][value_]:=ReplaceAll[value,{True->"1",False->""}]
-ASDOptionHandler["units"][value_]:=ReplaceAll[value,{"cm-1"->"1","eV"->"2","Rydberg"->"3"}]
+ASDOptionHandler["units"][value_]:=ReplaceAll[value,{"cm-1"->"0","eV"->"1","Rydberg"->"2"}]
 ASDOptionHandler["format"][value_]:=ReplaceAll[value,{"HTML"->"0","ASCII"->"1","CSV"->"2","Tab-delimited"->"3"}]
-
-
-(* ::Input::Initialization:: *)
-ASDLevelQueryURL[species_,opts:OptionsPattern[]]:=ASDLevelQueryURL[species,0,opts]
-ASDLevelQueryURL[species_,charge_,OptionsPattern[]]:=StringJoin[
-Flatten[Join[
-{$ASDLevelsBaseURL},
-Riffle[Join[
-{{"spectrum","=",FormatSpecies[species,charge]}},
-Table[
-ReplaceAll[
-{option,"=",ASDOptionHandler[option][OptionValue[option]]}
-,{{_,_,""}->{}}](*remove options set to False, which have empty strings at the end here*)
-,{option,Options[ASDLevelQueryURL][[All,1]]}]
-],{"&"}]]
-]]
 
 
 (* ::Input::Initialization:: *)
@@ -160,12 +125,17 @@ ASDLevelQuery["B",0,"units"->"cm-1","biblio"->False]
 
 
 (* ::Input::Initialization:: *)
+$ALASUserAgent="Atomic Levels And Spectra package, https://github.com/episanty/ALAS, version "<>$ALASVersion<>", running over the Wolfram HTTPClient on Mathematica "<>$Version;
+
+
+(* ::Input::Initialization:: *)
 Options[ASDLevelRequest]=Options[ASDLevelQuery];
 
 ASDLevelRequest[species_,opts:OptionsPattern[]]:=ASDLevelRequest[species,0,opts]
 ASDLevelRequest[species_,charge_,OptionsPattern[]]:=HTTPRequest[URL[$ASDLevelsBaseURL],
 <|
-"Query"->ASDLevelQuery[species,charge]
+"Query"->ASDLevelQuery[species,charge],
+"UserAgent"->$ALASUserAgent
 |>
 ]
 
@@ -181,7 +151,11 @@ FormatSpeciesName[species_]:=ElementData[species,"Abbreviation"]
 
 
 (* ::Input::Initialization:: *)
-SubmitASDQuery[queryURL_]:=SubmitASDQuery[queryURL]=URLRead[queryURL]
+SubmitASDQuery[query_]:=SubmitASDQuery[query]=URLRead[query]
+
+
+(* ::Input::Initialization:: *)
+TrimASDRecordStrings[item_]:=If[StringQ[item],StringTrim[item,"=\""|"\""],item]
 
 
 

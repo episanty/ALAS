@@ -38,7 +38,7 @@ Cell[BoxData[
      RowBox[{"ALAS", "."}]}]}]}], "\[IndentingNewLine]", "*)"}]], "Input",
  CellGroupingRules->{GroupTogetherGrouping, 10000.},
  InitializationCell->True,
- CellLabel->"In[315]:=",ExpressionUUID->"82d38177-9df9-4b82-9d60-a29240b5c273"]
+ CellLabel->"In[1]:=",ExpressionUUID->"82d38177-9df9-4b82-9d60-a29240b5c273"]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -74,7 +74,7 @@ Cell[BoxData[
  RowBox[{
   RowBox[{"BeginPackage", "[", "\"\<ALAS`\>\"", "]"}], ";"}]], "Input",
  InitializationCell->True,
- CellLabel->"In[316]:=",ExpressionUUID->"d8194a12-20ba-4527-9da4-5c21f77858c8"]
+ CellLabel->"In[2]:=",ExpressionUUID->"d8194a12-20ba-4527-9da4-5c21f77858c8"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -105,8 +105,7 @@ and its timestamp.\>\""}], ";"}], "\[IndentingNewLine]",
    "\"\<$ALASTimestamp prints the timestamp of the current version of the \
 ALAS package.\>\""}], ";"}]}], "Input",
  InitializationCell->True,
- CellLabel->
-  "In[317]:=",ExpressionUUID->"aa97ee0f-f35a-441d-9482-ce45b1a816f6"],
+ CellLabel->"In[3]:=",ExpressionUUID->"aa97ee0f-f35a-441d-9482-ce45b1a816f6"],
 
 Cell["\<\
 The timestamp is updated every time this notebook is saved, via an \
@@ -187,18 +186,17 @@ Cell[BoxData[{
   RowBox[{"$ALASVersion", ":=", 
    RowBox[{"\"\<ALAS v0.1, \>\"", "<>", "$ALASTimestamp"}]}], ";"}]}], "Input",
  InitializationCell->True,
- CellLabel->
-  "In[319]:=",ExpressionUUID->"90617182-59d4-4545-b4c7-e01a2308359e"],
+ CellLabel->"In[5]:=",ExpressionUUID->"90617182-59d4-4545-b4c7-e01a2308359e"],
 
 Cell[BoxData[{
  RowBox[{
-  RowBox[{"$ALASTimestamp", "=", "\"\<Wed 19 May 2021 13:57:35\>\""}], 
+  RowBox[{"$ALASTimestamp", "=", "\"\<Wed 19 May 2021 19:34:07\>\""}], 
   ";"}], "\n", 
  RowBox[{
   RowBox[{"End", "[", "]"}], ";"}]}], "Input",
  InitializationCell->True,
  CellTags->
-  "version-timestamp",ExpressionUUID->"98858918-ae24-46b6-9215-c1d95ca8425c"]
+  "version-timestamp",ExpressionUUID->"0500b1b5-ba65-4077-9219-5f893714d81f"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -213,8 +211,7 @@ Cell[BoxData[
    "\"\<$ALASDirectory is the directory where the current ALAS package \
 instance is located.\>\""}], ";"}]], "Input",
  InitializationCell->True,
- CellLabel->
-  "In[323]:=",ExpressionUUID->"c87f6883-8e5e-4a34-a1b9-2f3cdfa24230"],
+ CellLabel->"In[9]:=",ExpressionUUID->"c87f6883-8e5e-4a34-a1b9-2f3cdfa24230"],
 
 Cell[BoxData[{
  RowBox[{
@@ -269,7 +266,7 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"End", "[", "]"}], ";"}]}], "Input",
  InitializationCell->True,
- CellLabel->"In[324]:=",ExpressionUUID->"f4003c50-c4bf-43a7-96de-6f1292ddff7e"]
+ CellLabel->"In[10]:=",ExpressionUUID->"f4003c50-c4bf-43a7-96de-6f1292ddff7e"]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -288,8 +285,7 @@ package if there is one.\>\""}], ";"}], "\[IndentingNewLine]",
    RowBox[{"$ALASCommit", "::", "OS"}], "=", 
    "\"\<$ALASCommit has only been tested on Linux.\>\""}], ";"}]}], "Input",
  InitializationCell->True,
- CellLabel->
-  "In[327]:=",ExpressionUUID->"fce25619-8923-4995-9cae-ebb712b0cd01"],
+ CellLabel->"In[13]:=",ExpressionUUID->"fce25619-8923-4995-9cae-ebb712b0cd01"],
 
 Cell[BoxData[{
  RowBox[{
@@ -318,7 +314,7 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"End", "[", "]"}], ";"}]}], "Input",
  InitializationCell->True,
- CellLabel->"In[329]:=",ExpressionUUID->"56b69d2c-3f13-4848-bcc7-6db05f85bf58"]
+ CellLabel->"In[15]:=",ExpressionUUID->"56b69d2c-3f13-4848-bcc7-6db05f85bf58"]
 }, Closed]]
 }, Open  ]]
 }, Open  ]],
@@ -352,7 +348,7 @@ Cell[BoxData[
  RowBox[{
   RowBox[{"EndPackage", "[", "]"}], ";"}]], "Input",
  InitializationCell->True,
- CellLabel->"In[332]:=",ExpressionUUID->"7bfde5e2-e60e-49b0-9216-395b306e3c3c"]
+ CellLabel->"In[18]:=",ExpressionUUID->"7bfde5e2-e60e-49b0-9216-395b306e3c3c"]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -365,7 +361,7 @@ Cell[BoxData[
   RowBox[{"DistributeDefinitions", "[", "\"\<ALAS`\>\"", "]"}], 
   ";"}]], "Input",
  InitializationCell->True,
- CellLabel->"In[333]:=",ExpressionUUID->"0b59eb5f-39e5-4fe3-a624-8b4b88bac2fa"]
+ CellLabel->"In[19]:=",ExpressionUUID->"0b59eb5f-39e5-4fe3-a624-8b4b88bac2fa"]
 }, Closed]]
 }, Open  ]],
 
@@ -709,16 +705,15 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{
   "$ASDLevelsBaseURL", "=", 
-   "\"\<https://physics.nist.gov/cgi-bin/ASD/energy1.pl?\>\""}], 
+   "\"\<https://physics.nist.gov/cgi-bin/ASD/energy1.pl\>\""}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
   "$ASDLinesBaseURL", "=", 
-   "\"\<https://physics.nist.gov/cgi-bin/ASD/lines1.pl?\>\""}], 
+   "\"\<https://physics.nist.gov/cgi-bin/ASD/lines1.pl\>\""}], 
   ";"}]}], "Input",
  InitializationCell->True,
- CellLabel->
-  "In[544]:=",ExpressionUUID->"1ef9b090-c8a8-4810-bdb9-a95bd76ef674"],
+ CellLabel->"In[20]:=",ExpressionUUID->"1ef9b090-c8a8-4810-bdb9-a95bd76ef674"],
 
 Cell[BoxData[
  RowBox[{"\[IndentingNewLine]", 
@@ -866,7 +861,6 @@ Cell[BoxData[
       RowBox[{"Level", " ", "splitting"}], "*)"}], 
      RowBox[{"\"\<splitting\>\"", "\[Rule]", "False"}]}], 
     "\[IndentingNewLine]", "}"}]}], ";"}]], "Input",
- InitializationCell->True,
  CellLabel->
   "In[627]:=",ExpressionUUID->"e3604a3f-8266-4c63-abc7-bf6ce82501ed"],
 
@@ -901,9 +895,9 @@ Cell[BoxData[{
    RowBox[{"value", ",", 
     RowBox[{"{", 
      RowBox[{
-      RowBox[{"\"\<cm-1\>\"", "\[Rule]", "\"\<1\>\""}], ",", 
-      RowBox[{"\"\<eV\>\"", "\[Rule]", "\"\<2\>\""}], ",", 
-      RowBox[{"\"\<Rydberg\>\"", "\[Rule]", "\"\<3\>\""}]}], "}"}]}], 
+      RowBox[{"\"\<cm-1\>\"", "\[Rule]", "\"\<0\>\""}], ",", 
+      RowBox[{"\"\<eV\>\"", "\[Rule]", "\"\<1\>\""}], ",", 
+      RowBox[{"\"\<Rydberg\>\"", "\[Rule]", "\"\<2\>\""}]}], "}"}]}], 
    "]"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
@@ -919,8 +913,7 @@ Cell[BoxData[{
       RowBox[{"\"\<Tab-delimited\>\"", "\[Rule]", "\"\<3\>\""}]}], "}"}]}], 
    "]"}]}]}], "Input",
  InitializationCell->True,
- CellLabel->
-  "In[417]:=",ExpressionUUID->"0d9d8713-9301-4b93-bd89-7a0032daec5f"],
+ CellLabel->"In[22]:=",ExpressionUUID->"0d9d8713-9301-4b93-bd89-7a0032daec5f"],
 
 Cell[BoxData[{
  RowBox[{
@@ -981,9 +974,8 @@ Cell[BoxData[{
                RowBox[{"All", ",", "1"}], "\[RightDoubleBracket]"}]}], 
              "}"}]}], "]"}]}], "\[IndentingNewLine]", "]"}], ",", 
         RowBox[{"{", "\"\<&\>\"", "}"}]}], "]"}]}], "]"}], 
-    "\[IndentingNewLine]", "]"}], "]"}]}]}], "Input",
- InitializationCell->
-  True,ExpressionUUID->"560948ce-e4b6-4ebd-8026-89c113b64fa6"],
+    "\[IndentingNewLine]", "]"}], 
+   "]"}]}]}], "Input",ExpressionUUID->"560948ce-e4b6-4ebd-8026-89c113b64fa6"],
 
 Cell[CellGroupData[{
 
@@ -1071,8 +1063,7 @@ Cell[BoxData[
      RowBox[{"\"\<splitting\>\"", "\[Rule]", "False"}]}], 
     "\[IndentingNewLine]", "}"}]}], ";"}]], "Input",
  InitializationCell->True,
- CellLabel->
-  "In[641]:=",ExpressionUUID->"ffd3ccaa-a5f8-47a0-a95b-60a5f1685b79"],
+ CellLabel->"In[26]:=",ExpressionUUID->"ffd3ccaa-a5f8-47a0-a95b-60a5f1685b79"],
 
 Cell[CellGroupData[{
 
@@ -1135,33 +1126,14 @@ Cell[BoxData[{
    RowBox[{"\"\<units\>\"", "\[Rule]", "\"\<cm-1\>\""}], ",", 
    RowBox[{"\"\<biblio\>\"", "\[Rule]", "False"}]}], "]"}]}], "Input",
  InitializationCell->True,
- CellLabel->
-  "In[682]:=",ExpressionUUID->"130483b1-d0e6-42fd-a544-d4677191e4a3"],
+ CellLabel->"In[27]:=",ExpressionUUID->"130483b1-d0e6-42fd-a544-d4677191e4a3"],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
-   RowBox[{"\<\"spectrum\"\>", "\[Rule]", "\<\"B+0\"\>"}], ",", 
-   RowBox[{"\<\"submit\"\>", "\[Rule]", "\<\"Retrieve+Data\"\>"}], ",", 
-   RowBox[{"\<\"units\"\>", "\[Rule]", "\<\"2\"\>"}], ",", 
-   RowBox[{"\<\"format\"\>", "\[Rule]", "\<\"2\"\>"}], ",", 
-   RowBox[{"\<\"multiplet_ordered\"\>", "\[Rule]", "\<\"0\"\>"}], ",", 
-   RowBox[{"\<\"conf_out\"\>", "\[Rule]", "\<\"on\"\>"}], ",", 
-   RowBox[{"\<\"term_out\"\>", "\[Rule]", "\<\"on\"\>"}], ",", 
-   RowBox[{"\<\"level_out\"\>", "\[Rule]", "\<\"on\"\>"}], ",", 
-   RowBox[{"\<\"unc_out\"\>", "\[Rule]", "\<\"1\"\>"}], ",", 
-   RowBox[{"\<\"j_out\"\>", "\[Rule]", "\<\"on\"\>"}], ",", 
-   RowBox[{"\<\"g_out\"\>", "\[Rule]", "\<\"on\"\>"}], ",", 
-   RowBox[{"\<\"lande_out\"\>", "\[Rule]", "\<\"on\"\>"}], ",", 
-   RowBox[{"\<\"perc_out\"\>", "\[Rule]", "\<\"on\"\>"}], ",", 
-   RowBox[{"\<\"biblio\"\>", "\[Rule]", "\<\"on\"\>"}]}], "}"}]], "Output",
- CellLabel->
-  "Out[684]=",ExpressionUUID->"f3eda5b3-754f-433d-add4-1f5d2bb9706b"],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-   RowBox[{"\<\"spectrum\"\>", "\[Rule]", "\<\"B+0\"\>"}], ",", 
+   RowBox[{"\<\"spectrum\"\>", "\[Rule]", 
+    RowBox[{"FormatSpecies", "[", 
+     RowBox[{"\<\"B\"\>", ",", "0"}], "]"}]}], ",", 
    RowBox[{"\<\"submit\"\>", "\[Rule]", "\<\"Retrieve+Data\"\>"}], ",", 
    RowBox[{"\<\"units\"\>", "\[Rule]", "\<\"1\"\>"}], ",", 
    RowBox[{"\<\"format\"\>", "\[Rule]", "\<\"2\"\>"}], ",", 
@@ -1173,9 +1145,51 @@ Cell[BoxData[
    RowBox[{"\<\"j_out\"\>", "\[Rule]", "\<\"on\"\>"}], ",", 
    RowBox[{"\<\"g_out\"\>", "\[Rule]", "\<\"on\"\>"}], ",", 
    RowBox[{"\<\"lande_out\"\>", "\[Rule]", "\<\"on\"\>"}], ",", 
+   RowBox[{"\<\"perc_out\"\>", "\[Rule]", "\<\"on\"\>"}], ",", 
+   RowBox[{"\<\"biblio\"\>", "\[Rule]", "\<\"on\"\>"}]}], "}"}]], "Output",
+ CellLabel->"Out[29]=",ExpressionUUID->"4a7e6be4-f4dc-43d3-87fb-3a58d19faf71"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\<\"spectrum\"\>", "\[Rule]", 
+    RowBox[{"FormatSpecies", "[", 
+     RowBox[{"\<\"B\"\>", ",", "0"}], "]"}]}], ",", 
+   RowBox[{"\<\"submit\"\>", "\[Rule]", "\<\"Retrieve+Data\"\>"}], ",", 
+   RowBox[{"\<\"units\"\>", "\[Rule]", "\<\"0\"\>"}], ",", 
+   RowBox[{"\<\"format\"\>", "\[Rule]", "\<\"2\"\>"}], ",", 
+   RowBox[{"\<\"multiplet_ordered\"\>", "\[Rule]", "\<\"0\"\>"}], ",", 
+   RowBox[{"\<\"conf_out\"\>", "\[Rule]", "\<\"on\"\>"}], ",", 
+   RowBox[{"\<\"term_out\"\>", "\[Rule]", "\<\"on\"\>"}], ",", 
+   RowBox[{"\<\"level_out\"\>", "\[Rule]", "\<\"on\"\>"}], ",", 
+   RowBox[{"\<\"unc_out\"\>", "\[Rule]", "\<\"1\"\>"}], ",", 
+   RowBox[{"\<\"j_out\"\>", "\[Rule]", "\<\"on\"\>"}], ",", 
+   RowBox[{"\<\"g_out\"\>", "\[Rule]", "\<\"on\"\>"}], ",", 
+   RowBox[{"\<\"lande_out\"\>", "\[Rule]", "\<\"on\"\>"}], ",", 
    RowBox[{"\<\"perc_out\"\>", "\[Rule]", "\<\"on\"\>"}]}], "}"}]], "Output",
- CellLabel->"Out[685]=",ExpressionUUID->"7bd9dede-08a8-4165-baf1-38d125aa030f"]
+ CellLabel->"Out[30]=",ExpressionUUID->"87eda784-2d5d-4cfc-a694-044751f93097"]
 }, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}]], \
+"Input",ExpressionUUID->"d69c4162-8a92-42b2-88ff-0b90bb2c8a37"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"$ALASUserAgent", "=", 
+   RowBox[{
+   "\"\<Atomic Levels And Spectra package, https://github.com/episanty/ALAS, \
+version \>\"", "<>", "$ALASVersion", "<>", 
+    "\"\<, running over the Wolfram HTTPClient on Mathematica \>\"", "<>", 
+    "$Version"}]}], ";"}]], "Input",
+ InitializationCell->True,
+ CellLabel->"In[31]:=",ExpressionUUID->"576900ed-6d1c-44df-8889-68f46b43f9b5"],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}]], \
+"Input",ExpressionUUID->"ed6b9506-d33d-4fea-be4f-117360bc0e5e"],
 
 Cell[CellGroupData[{
 
@@ -1203,15 +1217,18 @@ Cell[BoxData[{
      RowBox[{"URL", "[", "$ASDLevelsBaseURL", "]"}], ",", 
      "\[IndentingNewLine]", 
      RowBox[{"\[LeftAssociation]", "\[IndentingNewLine]", 
-      RowBox[{"\"\<Query\>\"", "\[Rule]", 
-       RowBox[{"ASDLevelQuery", "[", 
-        RowBox[{"species", ",", "charge"}], "]"}]}], "\[IndentingNewLine]", 
-      "\[RightAssociation]"}]}], "\[IndentingNewLine]", "]"}]}], 
-  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"\"\<Query\>\"", "\[Rule]", 
+        RowBox[{"ASDLevelQuery", "[", 
+         RowBox[{"species", ",", "charge"}], "]"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"\"\<UserAgent\>\"", "\[Rule]", "$ALASUserAgent"}]}], 
+      "\[IndentingNewLine]", "\[RightAssociation]"}]}], "\[IndentingNewLine]",
+     "]"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{"ASDLevelRequest", "[", 
   RowBox[{"\"\<B\>\"", ",", "0"}], "]"}]}], "Input",
- InitializationCell->
-  True,ExpressionUUID->"f59e3a32-ce3d-4937-a428-783698086c8a"],
+ InitializationCell->True,
+ CellLabel->"In[32]:=",ExpressionUUID->"f59e3a32-ce3d-4937-a428-783698086c8a"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1242,15 +1259,8 @@ Cell[BoxData[
                  "\[InvisibleSpace]", 
                  TagBox[
                   TemplateBox[{
-                    TagBox[
-                    "\"https://physics.nist.gov/cgi-bin/ASD/energy1.pl?\
-spectrum=B%2B0&submit=Retrieve%2BData&units=2&format=2&multiplet_ordered=0&\
-conf_out=on&term_out=on&level_out=on&unc_out=1&j_out=on&g_out=on&lande_out=on&\
-perc_out=on&biblio=on\"", Short], 
-                    "https://physics.nist.gov/cgi-bin/ASD/energy1.pl?spectrum=\
-B%2B0&submit=Retrieve%2BData&units=2&format=2&multiplet_ordered=0&conf_out=on&\
-term_out=on&level_out=on&unc_out=1&j_out=on&g_out=on&lande_out=on&perc_out=on&\
-biblio=on"}, "HyperlinkURL"], "SummaryItem"]}]}, {
+                    TagBox["$Failed", Short], {$Failed, None}, ButtonData}, 
+                   "HyperlinkDefault"], "SummaryItem"]}]}, {
                RowBox[{
                  TagBox["\"ContentType: \"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
@@ -1289,15 +1299,8 @@ biblio=on"}, "HyperlinkURL"], "SummaryItem"]}]}, {
                  "\[InvisibleSpace]", 
                  TagBox[
                   TemplateBox[{
-                    TagBox[
-                    "\"https://physics.nist.gov/cgi-bin/ASD/energy1.pl?\
-spectrum=B%2B0&submit=Retrieve%2BData&units=2&format=2&multiplet_ordered=0&\
-conf_out=on&term_out=on&level_out=on&unc_out=1&j_out=on&g_out=on&lande_out=on&\
-perc_out=on&biblio=on\"", Short], 
-                    "https://physics.nist.gov/cgi-bin/ASD/energy1.pl?spectrum=\
-B%2B0&submit=Retrieve%2BData&units=2&format=2&multiplet_ordered=0&conf_out=on&\
-term_out=on&level_out=on&unc_out=1&j_out=on&g_out=on&lande_out=on&perc_out=on&\
-biblio=on"}, "HyperlinkURL"], "SummaryItem"]}]}, {
+                    TagBox["$Failed", Short], {$Failed, None}, ButtonData}, 
+                   "HyperlinkDefault"], "SummaryItem"]}]}, {
                RowBox[{
                  TagBox["\"ContentType: \"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
@@ -1319,18 +1322,22 @@ biblio=on"}, "HyperlinkURL"], "SummaryItem"]}]}, {
      "SummaryPanel"],
     DynamicModuleValues:>{}], "]"}],
   HTTPRequest[
-   URL["https://physics.nist.gov/cgi-bin/ASD/energy1.pl?"], 
+   URL["https://physics.nist.gov/cgi-bin/ASD/energy1.pl"], 
    Association[
    "Query" -> {
-     "spectrum" -> "B+0", "submit" -> "Retrieve+Data", "units" -> "2", 
-      "format" -> "2", "multiplet_ordered" -> "0", "conf_out" -> "on", 
-      "term_out" -> "on", "level_out" -> "on", "unc_out" -> "1", "j_out" -> 
-      "on", "g_out" -> "on", "lande_out" -> "on", "perc_out" -> "on", 
-      "biblio" -> "on"}]],
+     "spectrum" -> $CellContext`FormatSpecies["B", 0], "submit" -> 
+      "Retrieve+Data", "units" -> "1", "format" -> "2", "multiplet_ordered" -> 
+      "0", "conf_out" -> "on", "term_out" -> "on", "level_out" -> "on", 
+      "unc_out" -> "1", "j_out" -> "on", "g_out" -> "on", "lande_out" -> "on",
+       "perc_out" -> "on", "biblio" -> "on"}, "UserAgent" -> 
+    "Atomic Levels And Spectra package, https://github.com/episanty/ALAS, \
+version ALAS v0.1, Wed 19 May 2021 19:20:19, running over the Wolfram \
+HTTPClient on Mathematica 12.2.0 for Microsoft Windows (64-bit) (December 12, \
+2020)"]],
   Editable->False,
   SelectWithContents->True,
   Selectable->False]], "Output",
- CellLabel->"Out[689]=",ExpressionUUID->"56bd134f-60f3-4232-9aff-313ea982f6ed"]
+ CellLabel->"Out[35]=",ExpressionUUID->"31bc7d47-0995-4879-94a2-9aefbf5c601e"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -1384,8 +1391,7 @@ Cell[BoxData[{
   RowBox[{"ElementData", "[", 
    RowBox[{"species", ",", "\"\<Abbreviation\>\""}], "]"}]}]}], "Input",
  InitializationCell->True,
- CellLabel->
-  "In[525]:=",ExpressionUUID->"9fd34113-ca9c-4f50-962c-20c9e9cba221"],
+ CellLabel->"In[36]:=",ExpressionUUID->"9fd34113-ca9c-4f50-962c-20c9e9cba221"],
 
 Cell[CellGroupData[{
 
@@ -2512,7 +2518,8 @@ Cell[BoxData[
                  TagBox["\"text/plain;charset=UTF-8\"", "SummaryItem"]}]}}, 
              GridBoxAlignment -> {
               "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
-             False, GridBoxItemSize -> {
+             False, 
+             GridBoxItemSize -> {
               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
              GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
               BaseStyle -> {
@@ -2773,18 +2780,30 @@ Cell[BoxData["\<\"text/plain; charset=UTF-8\"\>"], "Output",
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"SubmitASDQuery", "[", "queryURL_", "]"}], ":=", 
+  RowBox[{"SubmitASDQuery", "[", "query_", "]"}], ":=", 
   RowBox[{
-   RowBox[{"SubmitASDQuery", "[", "queryURL", "]"}], "=", 
-   RowBox[{"URLRead", "[", "queryURL", "]"}]}]}]], "Input",
+   RowBox[{"SubmitASDQuery", "[", "query", "]"}], "=", 
+   RowBox[{"URLRead", "[", "query", "]"}]}]}]], "Input",
  InitializationCell->True,
- CellLabel->
-  "In[580]:=",ExpressionUUID->"6cf8956c-0821-4815-bcfc-64a0290b1c68"],
+ CellLabel->"In[40]:=",ExpressionUUID->"6cf8956c-0821-4815-bcfc-64a0290b1c68"],
 
 Cell[BoxData[
  RowBox[{"\[IndentingNewLine]", 
   "\[IndentingNewLine]"}]], \
 "Input",ExpressionUUID->"f496dfd6-3aec-4fae-9941-b5d89e25f4d6"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TrimASDRecordStrings", "[", "item_", "]"}], ":=", 
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"StringQ", "[", "item", "]"}], ",", 
+    RowBox[{"StringTrim", "[", 
+     RowBox[{"item", ",", 
+      RowBox[{"\"\<=\\\"\>\"", "|", "\"\<\\\"\>\""}]}], "]"}], ",", "item"}], 
+   "]"}]}]], "Input",
+ InitializationCell->True,
+ CellLabel->"In[45]:=",ExpressionUUID->"f4aa7a82-d2f5-454a-b6a8-1a3ad4663f57"],
 
 Cell[CellGroupData[{
 
@@ -2831,174 +2850,330 @@ Cell[BoxData[{
            RowBox[{
             RowBox[{
             "RawTable", "\[LeftDoubleBracket]", "1", 
-             "\[RightDoubleBracket]"}], "\[Rule]", "#"}], "]"}], "]"}], "&"}],
-         ",", "\[IndentingNewLine]", 
+             "\[RightDoubleBracket]"}], "\[Rule]", 
+            RowBox[{"(", 
+             RowBox[{"TrimASDRecordStrings", "/@", "#"}], ")"}]}], "]"}], 
+          "]"}], "&"}], ",", "\[IndentingNewLine]", 
         RowBox[{"RawTable", "\[LeftDoubleBracket]", 
-         RowBox[{"2", ";;", "10"}], "\[RightDoubleBracket]"}]}], 
+         RowBox[{"2", ";;"}], "\[RightDoubleBracket]"}]}], 
        "\[IndentingNewLine]", "]"}]}]}], "\[IndentingNewLine]", 
     "\[IndentingNewLine]", "]"}]}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
- RowBox[{"ParseASDQueryResponse", "[", "response1", 
-  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ParseASDQueryResponse", "[", "response1", "]"}], 
+  "\[LeftDoubleBracket]", 
+  RowBox[{"1", ";;", "10"}], "\[RightDoubleBracket]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"(*", 
    RowBox[{"ParseASDQueryResponse", "[", "response2", "]"}], 
    "*)"}]}]}], "Input",
- CellLabel->
-  "In[630]:=",ExpressionUUID->"2e3b9139-9ba0-47b1-a5ad-437b9f71b268"],
+ CellLabel->"In[46]:=",ExpressionUUID->"2e3b9139-9ba0-47b1-a5ad-437b9f71b268"],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
    RowBox[{"\[LeftAssociation]", 
     RowBox[{
-     RowBox[{"\<\"Configuration\"\>", "\[Rule]", "\<\"=\\\"1s2.2s2\\\"\"\>"}],
-      ",", 
-     RowBox[{"\<\"Term\"\>", "\[Rule]", "\<\"=\\\"1S\\\"\"\>"}], ",", 
-     RowBox[{"\<\"J\"\>", "\[Rule]", "\<\"=\\\"0\\\"\"\>"}], ",", 
+     RowBox[{"\<\"Configuration\"\>", "\[Rule]", "\<\"1s2.2s2\"\>"}], ",", 
+     RowBox[{"\<\"Term\"\>", "\[Rule]", "\<\"1S\"\>"}], ",", 
+     RowBox[{"\<\"J\"\>", "\[Rule]", "\<\"0\"\>"}], ",", 
      RowBox[{"\<\"g\"\>", "\[Rule]", "1"}], ",", 
-     RowBox[{"\<\"Level (Ry)\"\>", "\[Rule]", "\<\"=\\\" 0.0000000\\\"\"\>"}],
-      ",", 
-     RowBox[{"\<\"Uncertainty (Ry)\"\>", "\[Rule]", "\<\"=\\\"0\\\"\"\>"}], 
-     ",", 
+     RowBox[{"\<\"Level (eV)\"\>", "\[Rule]", "\<\" 0.000000\"\>"}], ",", 
+     RowBox[{"\<\"Uncertainty (eV)\"\>", "\[Rule]", "\<\"0\"\>"}], ",", 
      RowBox[{"\<\"Leading percentages\"\>", 
-      "\[Rule]", "\<\"=\\\"  93                      :     7  1s2.2p2    1S   \
-\\\"\"\>"}], ",", 
-     RowBox[{"\<\"Reference\"\>", "\[Rule]", "\<\"=\\\"L12120\\\"\"\>"}]}], 
+      "\[Rule]", "\<\"  93                      :     7  1s2.2p2    1S   \
+\"\>"}], ",", 
+     RowBox[{"\<\"Reference\"\>", "\[Rule]", "\<\"L12120\"\>"}]}], 
     "\[RightAssociation]"}], ",", 
    RowBox[{"\[LeftAssociation]", 
     RowBox[{
-     RowBox[{"\<\"Configuration\"\>", 
-      "\[Rule]", "\<\"=\\\"1s2.2s.2p\\\"\"\>"}], ",", 
-     RowBox[{"\<\"Term\"\>", "\[Rule]", "\<\"=\\\"3P*\\\"\"\>"}], ",", 
-     RowBox[{"\<\"J\"\>", "\[Rule]", "\<\"=\\\"0\\\"\"\>"}], ",", 
+     RowBox[{"\<\"Configuration\"\>", "\[Rule]", "\<\"1s2.2s.2p\"\>"}], ",", 
+     RowBox[{"\<\"Term\"\>", "\[Rule]", "\<\"3P*\"\>"}], ",", 
+     RowBox[{"\<\"J\"\>", "\[Rule]", "\<\"0\"\>"}], ",", 
      RowBox[{"\<\"g\"\>", "\[Rule]", "1"}], ",", 
-     RowBox[{"\<\"Level (Ry)\"\>", "\[Rule]", "\<\"=\\\" 0.3402265\\\"\"\>"}],
-      ",", 
-     RowBox[{"\<\"Uncertainty (Ry)\"\>", 
-      "\[Rule]", "\<\"=\\\"0.0000004\\\"\"\>"}], ",", 
+     RowBox[{"\<\"Level (eV)\"\>", "\[Rule]", "\<\" 4.629017\"\>"}], ",", 
+     RowBox[{"\<\"Uncertainty (eV)\"\>", "\[Rule]", "\<\"0.000005\"\>"}], ",", 
      RowBox[{"\<\"Leading percentages\"\>", 
-      "\[Rule]", "\<\"=\\\" 100                                               \
-\\\"\"\>"}], ",", 
-     RowBox[{"\<\"Reference\"\>", "\[Rule]", "\<\"=\\\"L12120\\\"\"\>"}]}], 
+      "\[Rule]", "\<\" 100                                               \
+\"\>"}], ",", 
+     RowBox[{"\<\"Reference\"\>", "\[Rule]", "\<\"L12120\"\>"}]}], 
     "\[RightAssociation]"}], ",", 
    RowBox[{"\[LeftAssociation]", 
     RowBox[{
-     RowBox[{"\<\"Configuration\"\>", 
-      "\[Rule]", "\<\"=\\\"1s2.2s.2p\\\"\"\>"}], ",", 
-     RowBox[{"\<\"Term\"\>", "\[Rule]", "\<\"=\\\"3P*\\\"\"\>"}], ",", 
-     RowBox[{"\<\"J\"\>", "\[Rule]", "\<\"=\\\"1\\\"\"\>"}], ",", 
+     RowBox[{"\<\"Configuration\"\>", "\[Rule]", "\<\"1s2.2s.2p\"\>"}], ",", 
+     RowBox[{"\<\"Term\"\>", "\[Rule]", "\<\"3P*\"\>"}], ",", 
+     RowBox[{"\<\"J\"\>", "\[Rule]", "\<\"1\"\>"}], ",", 
      RowBox[{"\<\"g\"\>", "\[Rule]", "3"}], ",", 
-     RowBox[{"\<\"Level (Ry)\"\>", "\[Rule]", "\<\"=\\\" 0.3402822\\\"\"\>"}],
-      ",", 
-     RowBox[{"\<\"Uncertainty (Ry)\"\>", 
-      "\[Rule]", "\<\"=\\\"0.0000003\\\"\"\>"}], ",", 
+     RowBox[{"\<\"Level (eV)\"\>", "\[Rule]", "\<\" 4.629775\"\>"}], ",", 
+     RowBox[{"\<\"Uncertainty (eV)\"\>", "\[Rule]", "\<\"0.000004\"\>"}], ",", 
      RowBox[{"\<\"Leading percentages\"\>", 
-      "\[Rule]", "\<\"=\\\" 100                                               \
-\\\"\"\>"}], ",", 
-     RowBox[{"\<\"Reference\"\>", "\[Rule]", "\<\"=\\\"L12120\\\"\"\>"}]}], 
+      "\[Rule]", "\<\" 100                                               \
+\"\>"}], ",", 
+     RowBox[{"\<\"Reference\"\>", "\[Rule]", "\<\"L12120\"\>"}]}], 
     "\[RightAssociation]"}], ",", 
    RowBox[{"\[LeftAssociation]", 
     RowBox[{
-     RowBox[{"\<\"Configuration\"\>", 
-      "\[Rule]", "\<\"=\\\"1s2.2s.2p\\\"\"\>"}], ",", 
-     RowBox[{"\<\"Term\"\>", "\[Rule]", "\<\"=\\\"3P*\\\"\"\>"}], ",", 
-     RowBox[{"\<\"J\"\>", "\[Rule]", "\<\"=\\\"2\\\"\"\>"}], ",", 
+     RowBox[{"\<\"Configuration\"\>", "\[Rule]", "\<\"1s2.2s.2p\"\>"}], ",", 
+     RowBox[{"\<\"Term\"\>", "\[Rule]", "\<\"3P*\"\>"}], ",", 
+     RowBox[{"\<\"J\"\>", "\[Rule]", "\<\"2\"\>"}], ",", 
      RowBox[{"\<\"g\"\>", "\[Rule]", "5"}], ",", 
-     RowBox[{"\<\"Level (Ry)\"\>", "\[Rule]", "\<\"=\\\" 0.3404293\\\"\"\>"}],
-      ",", 
-     RowBox[{"\<\"Uncertainty (Ry)\"\>", 
-      "\[Rule]", "\<\"=\\\"0.0000003\\\"\"\>"}], ",", 
+     RowBox[{"\<\"Level (eV)\"\>", "\[Rule]", "\<\" 4.631777\"\>"}], ",", 
+     RowBox[{"\<\"Uncertainty (eV)\"\>", "\[Rule]", "\<\"0.000004\"\>"}], ",", 
      RowBox[{"\<\"Leading percentages\"\>", 
-      "\[Rule]", "\<\"=\\\" 100                                               \
-\\\"\"\>"}], ",", 
-     RowBox[{"\<\"Reference\"\>", "\[Rule]", "\<\"=\\\"L12120\\\"\"\>"}]}], 
+      "\[Rule]", "\<\" 100                                               \
+\"\>"}], ",", 
+     RowBox[{"\<\"Reference\"\>", "\[Rule]", "\<\"L12120\"\>"}]}], 
     "\[RightAssociation]"}], ",", 
    RowBox[{"\[LeftAssociation]", 
     RowBox[{
-     RowBox[{"\<\"Configuration\"\>", 
-      "\[Rule]", "\<\"=\\\"1s2.2s.2p\\\"\"\>"}], ",", 
-     RowBox[{"\<\"Term\"\>", "\[Rule]", "\<\"=\\\"1P*\\\"\"\>"}], ",", 
-     RowBox[{"\<\"J\"\>", "\[Rule]", "\<\"=\\\"1\\\"\"\>"}], ",", 
+     RowBox[{"\<\"Configuration\"\>", "\[Rule]", "\<\"1s2.2s.2p\"\>"}], ",", 
+     RowBox[{"\<\"Term\"\>", "\[Rule]", "\<\"1P*\"\>"}], ",", 
+     RowBox[{"\<\"J\"\>", "\[Rule]", "\<\"1\"\>"}], ",", 
      RowBox[{"\<\"g\"\>", "\[Rule]", "3"}], ",", 
-     RowBox[{"\<\"Level (Ry)\"\>", 
-      "\[Rule]", "\<\"=\\\" 0.66883821\\\"\"\>"}], ",", 
-     RowBox[{"\<\"Uncertainty (Ry)\"\>", 
-      "\[Rule]", "\<\"=\\\"0.0000003\\\"\"\>"}], ",", 
+     RowBox[{"\<\"Level (eV)\"\>", "\[Rule]", "\<\" 9.100007\"\>"}], ",", 
+     RowBox[{"\<\"Uncertainty (eV)\"\>", "\[Rule]", "\<\"0.000004\"\>"}], ",", 
      RowBox[{"\<\"Leading percentages\"\>", 
-      "\[Rule]", "\<\"=\\\"  97                                               \
-\\\"\"\>"}], ",", 
-     RowBox[{"\<\"Reference\"\>", "\[Rule]", "\<\"=\\\"L12120\\\"\"\>"}]}], 
+      "\[Rule]", "\<\"  97                                               \
+\"\>"}], ",", 
+     RowBox[{"\<\"Reference\"\>", "\[Rule]", "\<\"L12120\"\>"}]}], 
     "\[RightAssociation]"}], ",", 
    RowBox[{"\[LeftAssociation]", 
     RowBox[{
-     RowBox[{"\<\"Configuration\"\>", "\[Rule]", "\<\"=\\\"1s2.2p2\\\"\"\>"}],
-      ",", 
-     RowBox[{"\<\"Term\"\>", "\[Rule]", "\<\"=\\\"3P\\\"\"\>"}], ",", 
-     RowBox[{"\<\"J\"\>", "\[Rule]", "\<\"=\\\"0\\\"\"\>"}], ",", 
+     RowBox[{"\<\"Configuration\"\>", "\[Rule]", "\<\"1s2.2p2\"\>"}], ",", 
+     RowBox[{"\<\"Term\"\>", "\[Rule]", "\<\"3P\"\>"}], ",", 
+     RowBox[{"\<\"J\"\>", "\[Rule]", "\<\"0\"\>"}], ",", 
      RowBox[{"\<\"g\"\>", "\[Rule]", "1"}], ",", 
-     RowBox[{"\<\"Level (Ry)\"\>", "\[Rule]", "\<\"=\\\" 0.9013468\\\"\"\>"}],
-      ",", 
-     RowBox[{"\<\"Uncertainty (Ry)\"\>", 
-      "\[Rule]", "\<\"=\\\"0.0000004\\\"\"\>"}], ",", 
+     RowBox[{"\<\"Level (eV)\"\>", "\[Rule]", "\<\" 12.263448\"\>"}], ",", 
+     RowBox[{"\<\"Uncertainty (eV)\"\>", "\[Rule]", "\<\"0.000005\"\>"}], ",", 
      RowBox[{"\<\"Leading percentages\"\>", 
-      "\[Rule]", "\<\"=\\\" 100                                               \
-\\\"\"\>"}], ",", 
-     RowBox[{"\<\"Reference\"\>", "\[Rule]", "\<\"=\\\"L12120\\\"\"\>"}]}], 
+      "\[Rule]", "\<\" 100                                               \
+\"\>"}], ",", 
+     RowBox[{"\<\"Reference\"\>", "\[Rule]", "\<\"L12120\"\>"}]}], 
     "\[RightAssociation]"}], ",", 
    RowBox[{"\[LeftAssociation]", 
     RowBox[{
-     RowBox[{"\<\"Configuration\"\>", "\[Rule]", "\<\"=\\\"1s2.2p2\\\"\"\>"}],
-      ",", 
-     RowBox[{"\<\"Term\"\>", "\[Rule]", "\<\"=\\\"3P\\\"\"\>"}], ",", 
-     RowBox[{"\<\"J\"\>", "\[Rule]", "\<\"=\\\"1\\\"\"\>"}], ",", 
+     RowBox[{"\<\"Configuration\"\>", "\[Rule]", "\<\"1s2.2p2\"\>"}], ",", 
+     RowBox[{"\<\"Term\"\>", "\[Rule]", "\<\"3P\"\>"}], ",", 
+     RowBox[{"\<\"J\"\>", "\[Rule]", "\<\"1\"\>"}], ",", 
      RowBox[{"\<\"g\"\>", "\[Rule]", "3"}], ",", 
-     RowBox[{"\<\"Level (Ry)\"\>", "\[Rule]", "\<\"=\\\" 0.9014242\\\"\"\>"}],
-      ",", 
-     RowBox[{"\<\"Uncertainty (Ry)\"\>", 
-      "\[Rule]", "\<\"=\\\"0.0000003\\\"\"\>"}], ",", 
+     RowBox[{"\<\"Level (eV)\"\>", "\[Rule]", "\<\" 12.264501\"\>"}], ",", 
+     RowBox[{"\<\"Uncertainty (eV)\"\>", "\[Rule]", "\<\"0.000004\"\>"}], ",", 
      RowBox[{"\<\"Leading percentages\"\>", 
-      "\[Rule]", "\<\"=\\\" 100                                               \
-\\\"\"\>"}], ",", 
-     RowBox[{"\<\"Reference\"\>", "\[Rule]", "\<\"=\\\"L12120\\\"\"\>"}]}], 
+      "\[Rule]", "\<\" 100                                               \
+\"\>"}], ",", 
+     RowBox[{"\<\"Reference\"\>", "\[Rule]", "\<\"L12120\"\>"}]}], 
     "\[RightAssociation]"}], ",", 
    RowBox[{"\[LeftAssociation]", 
     RowBox[{
-     RowBox[{"\<\"Configuration\"\>", "\[Rule]", "\<\"=\\\"1s2.2p2\\\"\"\>"}],
-      ",", 
-     RowBox[{"\<\"Term\"\>", "\[Rule]", "\<\"=\\\"3P\\\"\"\>"}], ",", 
-     RowBox[{"\<\"J\"\>", "\[Rule]", "\<\"=\\\"2\\\"\"\>"}], ",", 
+     RowBox[{"\<\"Configuration\"\>", "\[Rule]", "\<\"1s2.2p2\"\>"}], ",", 
+     RowBox[{"\<\"Term\"\>", "\[Rule]", "\<\"3P\"\>"}], ",", 
+     RowBox[{"\<\"J\"\>", "\[Rule]", "\<\"2\"\>"}], ",", 
      RowBox[{"\<\"g\"\>", "\[Rule]", "5"}], ",", 
-     RowBox[{"\<\"Level (Ry)\"\>", "\[Rule]", "\<\"=\\\" 0.9015462\\\"\"\>"}],
-      ",", 
-     RowBox[{"\<\"Uncertainty (Ry)\"\>", 
-      "\[Rule]", "\<\"=\\\"0.0000003\\\"\"\>"}], ",", 
+     RowBox[{"\<\"Level (eV)\"\>", "\[Rule]", "\<\" 12.266161\"\>"}], ",", 
+     RowBox[{"\<\"Uncertainty (eV)\"\>", "\[Rule]", "\<\"0.000004\"\>"}], ",", 
      RowBox[{"\<\"Leading percentages\"\>", 
-      "\[Rule]", "\<\"=\\\" 100                                               \
-\\\"\"\>"}], ",", 
-     RowBox[{"\<\"Reference\"\>", "\[Rule]", "\<\"=\\\"L12120\\\"\"\>"}]}], 
+      "\[Rule]", "\<\" 100                                               \
+\"\>"}], ",", 
+     RowBox[{"\<\"Reference\"\>", "\[Rule]", "\<\"L12120\"\>"}]}], 
     "\[RightAssociation]"}], ",", 
    RowBox[{"\[LeftAssociation]", 
     RowBox[{
-     RowBox[{"\<\"Configuration\"\>", "\[Rule]", "\<\"=\\\"1s2.2p2\\\"\"\>"}],
-      ",", 
-     RowBox[{"\<\"Term\"\>", "\[Rule]", "\<\"=\\\"1D\\\"\"\>"}], ",", 
-     RowBox[{"\<\"J\"\>", "\[Rule]", "\<\"=\\\"2\\\"\"\>"}], ",", 
+     RowBox[{"\<\"Configuration\"\>", "\[Rule]", "\<\"1s2.2p2\"\>"}], ",", 
+     RowBox[{"\<\"Term\"\>", "\[Rule]", "\<\"1D\"\>"}], ",", 
+     RowBox[{"\<\"J\"\>", "\[Rule]", "\<\"2\"\>"}], ",", 
      RowBox[{"\<\"g\"\>", "\[Rule]", "5"}], ",", 
-     RowBox[{"\<\"Level (Ry)\"\>", 
-      "\[Rule]", "\<\"=\\\" 0.93279820\\\"\"\>"}], ",", 
-     RowBox[{"\<\"Uncertainty (Ry)\"\>", 
-      "\[Rule]", "\<\"=\\\"0.0000003\\\"\"\>"}], ",", 
+     RowBox[{"\<\"Level (eV)\"\>", "\[Rule]", "\<\" 12.691366\"\>"}], ",", 
+     RowBox[{"\<\"Uncertainty (eV)\"\>", "\[Rule]", "\<\"0.000004\"\>"}], ",", 
      RowBox[{"\<\"Leading percentages\"\>", 
-      "\[Rule]", "\<\"=\\\"  94                                               \
-\\\"\"\>"}], ",", 
-     RowBox[{"\<\"Reference\"\>", "\[Rule]", "\<\"=\\\"L12120\\\"\"\>"}]}], 
+      "\[Rule]", "\<\"  94                                               \
+\"\>"}], ",", 
+     RowBox[{"\<\"Reference\"\>", "\[Rule]", "\<\"L12120\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Configuration\"\>", "\[Rule]", "\<\"1s2.2p2\"\>"}], ",", 
+     RowBox[{"\<\"Term\"\>", "\[Rule]", "\<\"1S\"\>"}], ",", 
+     RowBox[{"\<\"J\"\>", "\[Rule]", "\<\"0\"\>"}], ",", 
+     RowBox[{"\<\"g\"\>", "\[Rule]", "1"}], ",", 
+     RowBox[{"\<\"Level (eV)\"\>", "\[Rule]", "\<\" 15.827970\"\>"}], ",", 
+     RowBox[{"\<\"Uncertainty (eV)\"\>", "\[Rule]", "\<\"0.000004\"\>"}], ",", 
+     RowBox[{"\<\"Leading percentages\"\>", 
+      "\[Rule]", "\<\"  80                      :    15  1s2.2s.3s  1S   \
+\"\>"}], ",", 
+     RowBox[{"\<\"Reference\"\>", "\[Rule]", "\<\"L12120\"\>"}]}], 
     "\[RightAssociation]"}]}], "}"}]], "Output",
- CellLabel->"Out[631]=",ExpressionUUID->"27252183-8479-4e84-97e6-13f09948dffc"]
+ CellLabel->"Out[47]=",ExpressionUUID->"70ead865-76ca-44db-ab1d-46fecb8fa386"]
 }, Open  ]],
 
-Cell[BoxData["Association"], \
-"Input",ExpressionUUID->"b641b215-83c0-449d-8790-c82e249c923a"],
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[LeftAssociation]", 
+   RowBox[{
+    RowBox[{"\"\<Configuration\>\"", "\[Rule]", "\"\<1s2.2s.2p\>\""}], ",", 
+    RowBox[{"\"\<Term\>\"", "\[Rule]", "\"\<1P*\>\""}], ",", 
+    RowBox[{"\"\<J\>\"", "\[Rule]", "\"\<1\>\""}], ",", 
+    RowBox[{"\"\<g\>\"", "\[Rule]", "3"}], ",", 
+    RowBox[{"\"\<Level (eV)\>\"", "\[Rule]", "\"\< 9.100007\>\""}], ",", 
+    RowBox[{"\"\<Uncertainty (eV)\>\"", "\[Rule]", "\"\<0.000004\>\""}], ",", 
+    RowBox[{
+    "\"\<Leading percentages\>\"", "\[Rule]", 
+     "\"\<  97                                               \>\""}], ",", 
+    RowBox[{"\"\<Reference\>\"", "\[Rule]", "\"\<L12120\>\""}]}], 
+   "\[RightAssociation]"}], "[", "\"\<Level (eV)\>\"", "]"}]], "Input",
+ CellLabel->"In[48]:=",ExpressionUUID->"50fe5d77-2a55-4e13-bec3-b36266de7739"],
+
+Cell[BoxData["\<\" 9.100007\"\>"], "Output",
+ CellLabel->"Out[48]=",ExpressionUUID->"e74d1b8a-3c1e-485f-9060-a7c004f3edf3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"ParseASDRecord", "[", "assoc_", "]"}], ":=", 
+   RowBox[{"Association", "[", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"\"\<ConfigurationString\>\"", "\[Rule]", 
+       RowBox[{"assoc", "[", "\"\<Configuration\>\"", "]"}]}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\"\<TermString\>\"", "\[Rule]", 
+       RowBox[{"assoc", "[", "\"\<Term\>\"", "]"}]}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\"\<J\>\"", "\[Rule]", 
+       RowBox[{"ToExpression", "[", 
+        RowBox[{"assoc", "[", "\"\<J\>\"", "]"}], "]"}]}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\"\<g\>\"", "\[Rule]", 
+       RowBox[{"ToExpression", "[", 
+        RowBox[{"assoc", "[", "\"\<g\>\"", "]"}], "]"}]}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\"\<Energy\>\"", "\[Rule]", 
+       RowBox[{"Quantity", "[", 
+        RowBox[{
+         RowBox[{"ToExpression", "[", 
+          RowBox[{
+           RowBox[{"assoc", "[", "\"\<Level (eV)\>\"", "]"}], "<>", 
+           "\"\<`\>\""}], "]"}], ",", "\"\<Electronvolts\>\""}], "]"}]}], ",",
+       "\[IndentingNewLine]", 
+      RowBox[{"\"\<EnergyUncertainty\>\"", "\[Rule]", 
+       RowBox[{"Quantity", "[", 
+        RowBox[{
+         RowBox[{"ToExpression", "[", 
+          RowBox[{
+           RowBox[{"assoc", "[", "\"\<Uncertainty (eV)\>\"", "]"}], "<>", 
+           "\"\<`\>\""}], "]"}], ",", "\"\<Electronvolts\>\""}], "]"}]}], ",",
+       "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{
+        RowBox[{"\"\<LeadingPercentages\>\"", "\[Rule]", 
+         RowBox[{"assoc", "[", "\"\<Leading percentages\>\"", "]"}]}], ","}], 
+       "*)"}], "\[IndentingNewLine]", 
+      RowBox[{"\"\<Reference\>\"", "\[Rule]", 
+       RowBox[{"assoc", "[", "\"\<Reference\>\"", "]"}]}]}], 
+     "\[IndentingNewLine]", "}"}], "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"ParseASDRecord", "[", 
+  RowBox[{
+   RowBox[{"ParseASDQueryResponse", "[", "response1", "]"}], 
+   "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"ParseASDRecord", "[", 
+     RowBox[{
+      RowBox[{"ParseASDQueryResponse", "[", "response1", "]"}], 
+      "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], "]"}], "//", 
+    "InputForm"}], "*)"}]}]}], "Input",
+ CellLabel->"In[67]:=",ExpressionUUID->"d8fd8b38-c607-4788-a932-5129bb7fc4ca"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"ConfigurationString\"\>", "\[Rule]", "\<\"1s2.2s.2p\"\>"}], 
+   ",", 
+   RowBox[{"\<\"TermString\"\>", "\[Rule]", "\<\"3P*\"\>"}], ",", 
+   RowBox[{"\<\"J\"\>", "\[Rule]", "0"}], ",", 
+   RowBox[{"\<\"g\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"Energy\"\>", "\[Rule]", 
+    TemplateBox[{"4.629017`", "\"eV\"", "electronvolts", "\"Electronvolts\""},
+     "Quantity"]}], ",", 
+   RowBox[{"\<\"EnergyUncertainty\"\>", "\[Rule]", 
+    TemplateBox[{"5.`*^-6", "\"eV\"", "electronvolts", "\"Electronvolts\""},
+     "Quantity"]}], ",", 
+   RowBox[{"\<\"Reference\"\>", "\[Rule]", "\<\"L12120\"\>"}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellLabel->"Out[68]=",ExpressionUUID->"37e10c82-f94e-4a35-8e45-4e7c32d9af69"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ParseASDQueryResponse", "[", "response1", "]"}], 
+  "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]], "Input",
+ CellLabel->"In[61]:=",ExpressionUUID->"b2c32d96-b2e6-4971-9ccf-be233c2404ff"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"Configuration\"\>", "\[Rule]", "\<\"Configuration\"\>"}], ",", 
+   RowBox[{"\<\"Term\"\>", "\[Rule]", "\<\"Term\"\>"}], ",", 
+   RowBox[{"\<\"J\"\>", "\[Rule]", "\<\"J\"\>"}], ",", 
+   RowBox[{"\<\"g\"\>", "\[Rule]", "\<\"g\"\>"}], ",", 
+   RowBox[{"\<\"Level (Ry)\"\>", "\[Rule]", "\<\"Level (Ry)\"\>"}], ",", 
+   RowBox[{"\<\"Uncertainty (Ry)\"\>", 
+    "\[Rule]", "\<\"Uncertainty (Ry)\"\>"}], ",", 
+   RowBox[{"\<\"Leading percentages\"\>", 
+    "\[Rule]", "\<\"Leading percentages\"\>"}], ",", 
+   RowBox[{"\<\"Reference\"\>", "\[Rule]", "\<\"Reference\"\>"}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellLabel->"Out[61]=",ExpressionUUID->"c894196c-9201-4844-ad94-1cb8ca57510c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"StringTrim", "[", 
+  RowBox[{"\"\<=\\\"1s2.2p2\\\"\>\"", ",", 
+   RowBox[{"\"\<=\\\"\>\"", "|", "\"\<\\\"\>\""}]}], "]"}]], "Input",
+ CellLabel->"In[73]:=",ExpressionUUID->"ad708286-2017-4f04-b4ca-ada2d4df6769"],
+
+Cell[BoxData["\<\"1s2.2p2\"\>"], "Output",
+ CellLabel->"Out[73]=",ExpressionUUID->"46f14846-c82d-4005-a270-f7c2dcc5b25f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"StringTrim", "[", 
+  RowBox[{"2", ",", 
+   RowBox[{"\"\<=\\\"\>\"", "|", "\"\<\\\"\>\""}]}], "]"}]], "Input",
+ CellLabel->"In[74]:=",ExpressionUUID->"b077a719-d584-4f3f-8cc1-f2b6bc67312e"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "StringTrim", "strse", 
+   "\"String or list of strings expected at position \\!\\(\\*RowBox[{\\\"1\\\
+\"}]\\) in \\!\\(\\*RowBox[{\\\"StringTrim\\\", \\\"[\\\", RowBox[{\\\"2\\\", \
+\\\",\\\", RowBox[{\\\"\\\\\\\"=\\\\\\\\\\\\\\\"\\\\\\\"\\\", \\\"|\\\", \\\"\
+\\\\\\\"\\\\\\\\\\\\\\\"\\\\\\\"\\\"}]}], \\\"]\\\"}]\\).\"", 2, 74, 2, 
+   27307907536667304801, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellLabel->
+  "During evaluation of \
+In[74]:=",ExpressionUUID->"5dc47790-ac58-411b-afbe-94eeb2278cf3"],
+
+Cell[BoxData[
+ RowBox[{"StringTrim", "[", 
+  RowBox[{"2", ",", 
+   RowBox[{"\<\"=\\\"\"\>", "|", "\<\"\\\"\"\>"}]}], "]"}]], "Output",
+ CellLabel->"Out[74]=",ExpressionUUID->"f8eb3d5c-3840-4c54-a652-c19664ba2eb6"]
+}, Open  ]],
 
 Cell[BoxData[
  RowBox[{"\[IndentingNewLine]", 
@@ -3010,14 +3185,13 @@ Cell[CellGroupData[{
 Cell[BoxData[{
  RowBox[{"response1", "=", 
   RowBox[{"SubmitASDQuery", "[", 
-   RowBox[{"ASDLevelQueryURL", "[", 
+   RowBox[{"ASDLevelRequest", "[", 
     RowBox[{"\"\<B\>\"", ",", "1"}], "]"}], "]"}]}], "\[IndentingNewLine]", 
  RowBox[{"response2", "=", 
   RowBox[{"SubmitASDQuery", "[", 
-   RowBox[{"ASDLevelQueryURL", "[", 
+   RowBox[{"ASDLevelRequest", "[", 
     RowBox[{"\"\<B\>\"", ",", "6"}], "]"}], "]"}]}]}], "Input",
- CellLabel->
-  "In[628]:=",ExpressionUUID->"c924a028-b71f-43c7-a292-3bc846ef34dc"],
+ CellLabel->"In[41]:=",ExpressionUUID->"c924a028-b71f-43c7-a292-3bc846ef34dc"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -3106,60 +3280,60 @@ Cell[BoxData[
     DynamicModuleValues:>{}], "]"}],
   HTTPResponse[
    ByteArray[CompressedData["
-1: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
-ARdQgUw=
+1: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
+Gr/Tzg7/A4BvXgg=
     "]], 
    Association[
-   "Headers" -> {{"Date", "Tue, 18 May 2021 18:37:27 GMT"}, {
+   "Headers" -> {{"Date", "Wed, 19 May 2021 17:20:51 GMT"}, {
       "Server", "Apache"}, {"X-Frame-Options", "SAMEORIGIN"}, {
       "Strict-Transport-Security", "max-age=31536000; includeSubdomains"}, {
       "X-XSS-Protection", "1;mode=block"}, {
@@ -3172,8 +3346,7 @@ ARdQgUw=
   Editable->False,
   SelectWithContents->True,
   Selectable->False]], "Output",
- CellLabel->
-  "Out[628]=",ExpressionUUID->"f786f15a-26f7-4b0d-b5fc-ea3fe91bc3f0"],
+ CellLabel->"Out[41]=",ExpressionUUID->"f10b2897-0d3b-4144-8f95-53c85b1b2f0a"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -3287,7 +3460,7 @@ kdDvwtr3vsvT0l6UmHKKOI4JxzHhOCYcx4TjmHAcE45jwv83JuDe/6iX/+2Y
 h+ZHLYC+cg==
     "]], 
    Association[
-   "Headers" -> {{"Date", "Tue, 18 May 2021 18:37:28 GMT"}, {
+   "Headers" -> {{"Date", "Wed, 19 May 2021 17:20:52 GMT"}, {
       "Server", "Apache"}, {"X-Frame-Options", "SAMEORIGIN"}, {
       "Strict-Transport-Security", "max-age=31536000; includeSubdomains"}, {
       "X-XSS-Protection", "1;mode=block"}, {
@@ -3300,7 +3473,7 @@ h+ZHLYC+cg==
   Editable->False,
   SelectWithContents->True,
   Selectable->False]], "Output",
- CellLabel->"Out[629]=",ExpressionUUID->"cc4e8801-533a-4756-9e4d-ab1c9d82efea"]
+ CellLabel->"Out[42]=",ExpressionUUID->"b5a6ad92-ff17-447f-9dc5-ec7862395e76"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -3513,6 +3686,17 @@ Cell[BoxData[
    ",", "\<\"Spin\"\>", ",", "\<\"Stable\"\>", ",", "\<\"StandardName\"\>", 
    ",", "\<\"Symbol\"\>", ",", "\<\"Width\"\>"}], "}"}]], "Output",
  CellLabel->"Out[634]=",ExpressionUUID->"847b1118-ae57-4671-8e66-1442f48aff79"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ElementData", "[", 
+  RowBox[{"\"\<Ytterbium\>\"", ",", "\"\<AtomicNumber\>\""}], "]"}]], "Input",
+ CellLabel->"In[57]:=",ExpressionUUID->"d3a5249e-4a79-4678-891c-df8e4f5448c3"],
+
+Cell[BoxData["70"], "Output",
+ CellLabel->"Out[57]=",ExpressionUUID->"a4dc70fe-77e6-4056-b31e-c5d0df2defe2"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]

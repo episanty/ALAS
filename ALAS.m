@@ -40,7 +40,7 @@ $ALASVersion:="ALAS v0.1, "<>$ALASTimestamp;
 
 
 (* ::Input::Initialization:: *)
-$ALASTimestamp="Fri 21 May 2021 16:30:09";
+$ALASTimestamp="Fri 21 May 2021 16:35:58";
 End[];
 
 
@@ -68,14 +68,6 @@ Begin["`Private`"];
 $ALASCommit:=(If[$OperatingSystem!="Unix",Message[$ALASCommit::OS]];
 StringJoin[Riffle[ReadList["!cd "<>$ALASDirectory<>" && git log -1",String],{"\n"}]]);
 End[];
-
-
-(* ::Input::Initialization:: *)
-EndPackage[];
-
-
-(* ::Input::Initialization:: *)
-DistributeDefinitions["ALAS`"];
 
 
 (* ::Input::Initialization:: *)
@@ -120,8 +112,8 @@ option->ASDOptionHandler[option][OptionValue[option]]
 ,{option,Options[ASDLevelQuery][[All,1]]}]
 ]]
 
-ASDLevelQuery["B",0]
-ASDLevelQuery["B",0,"units"->"cm-1","biblio"->False]
+(*ASDLevelQuery["B",0]
+ASDLevelQuery["B",0,"units"\[Rule]"cm-1","biblio"\[Rule]False]*)
 
 
 (* ::Input::Initialization:: *)
@@ -139,7 +131,7 @@ ASDLevelRequest[species_,charge_,OptionsPattern[]]:=HTTPRequest[URL[$ASDLevelsBa
 |>
 ]
 
-ASDLevelRequest["B",0]
+(*ASDLevelRequest["B",0]*)
 
 
 (* ::Input::Initialization:: *)
@@ -156,6 +148,52 @@ SubmitASDQuery[query_]:=SubmitASDQuery[query]=URLRead[query]
 
 (* ::Input::Initialization:: *)
 TrimASDRecordStrings[item_]:=If[StringQ[item],StringTrim[item,"=\""|"\""],item]
+
+
+(* ::Input::Initialization:: *)
+ParseASDQueryResponse[response_]:=Block[{ContentType,RawTable},
+ContentType=StringSplit[
+Association[response["Headers"]]["content-type"]
+," "][[1]];
+
+If[ContentType=="text/html;",Return[{}]];
+(*Errors are returned as HTML*)
+
+RawTable=ImportString[response["Body"],"CSV"];
+
+Map[
+Association[Thread[RawTable[[1]]->(TrimASDRecordStrings/@#)]]&,
+RawTable[[2;;]]
+]
+
+]
+
+(*ParseASDQueryResponse[response1]\[LeftDoubleBracket]1;;10\[RightDoubleBracket]*)
+(*ParseASDQueryResponse[response2]*)
+
+
+(* ::Input::Initialization:: *)
+ParseASDRecord[assoc_]:=Association[{
+"ConfigurationString"->assoc["Configuration"],
+"TermString"->assoc["Term"],
+"J"->ToExpression[assoc["J"]],
+"g"->ToExpression[assoc["g"]],
+"Energy"->Quantity[ToExpression[assoc["Level (eV)"]<>"`"],"Electronvolts"],
+"EnergyUncertainty"->Quantity[ToExpression[assoc["Uncertainty (eV)"]<>"`"],"Electronvolts"],
+(*"LeadingPercentages"\[Rule]assoc["Leading percentages"],*)
+"Reference"->assoc["Reference"]
+}]
+
+(*ParseASDRecord[ParseASDQueryResponse[response1]\[LeftDoubleBracket]2\[RightDoubleBracket]]*)
+(*ParseASDRecord[ParseASDQueryResponse[response1]\[LeftDoubleBracket]2\[RightDoubleBracket]]//InputForm*)
+
+
+(* ::Input::Initialization:: *)
+EndPackage[];
+
+
+(* ::Input::Initialization:: *)
+DistributeDefinitions["ALAS`"];
 
 
 

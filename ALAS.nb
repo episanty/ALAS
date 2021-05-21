@@ -190,13 +190,13 @@ Cell[BoxData[{
 
 Cell[BoxData[{
  RowBox[{
-  RowBox[{"$ALASTimestamp", "=", "\"\<Wed 19 May 2021 19:34:07\>\""}], 
+  RowBox[{"$ALASTimestamp", "=", "\"\<Fri 21 May 2021 16:30:09\>\""}], 
   ";"}], "\n", 
  RowBox[{
   RowBox[{"End", "[", "]"}], ";"}]}], "Input",
  InitializationCell->True,
  CellTags->
-  "version-timestamp",ExpressionUUID->"0500b1b5-ba65-4077-9219-5f893714d81f"]
+  "version-timestamp",ExpressionUUID->"e01d6306-9199-46aa-a19f-6395c28d0193"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1180,11 +1180,16 @@ Cell[BoxData[
   RowBox[{"$ALASUserAgent", "=", 
    RowBox[{
    "\"\<Atomic Levels And Spectra package, https://github.com/episanty/ALAS, \
-version \>\"", "<>", "$ALASVersion", "<>", 
-    "\"\<, running over the Wolfram HTTPClient on Mathematica \>\"", "<>", 
-    "$Version"}]}], ";"}]], "Input",
+version \>\"", "<>", "$ALASVersion", "<>", "\"\<, running using the \>\"", "<>", 
+    RowBox[{"(", 
+     RowBox[{"\"\<user-agent\>\"", "/.", 
+      RowBox[{
+       RowBox[{"HTTPRequest", "[", "\"\<\>\"", "]"}], "[", "\"\<Headers\>\"", 
+       "]"}]}], ")"}], "<>", "\"\< on Mathematica \>\"", "<>", "$Version"}]}],
+   ";"}]], "Input",
  InitializationCell->True,
- CellLabel->"In[31]:=",ExpressionUUID->"576900ed-6d1c-44df-8889-68f46b43f9b5"],
+ CellLabel->
+  "In[219]:=",ExpressionUUID->"576900ed-6d1c-44df-8889-68f46b43f9b5"],
 
 Cell[BoxData[
  RowBox[{"\[IndentingNewLine]", 
@@ -3777,7 +3782,9 @@ StyleDefinitions->Notebook[{
     FontTracking -> "Plain", 
     FontVariations -> {
      "Outline" -> False, "Shadow" -> False, "StrikeThrough" -> False, 
-      "Underline" -> False}]}, Visible -> False, FrontEndVersion -> 
+      "Underline" -> False}]}, WindowSize -> {583.5, 499.5}, 
+  WindowMargins -> {{279, Automatic}, {Automatic, 38.4}}, Visible -> False, 
+  FrontEndVersion -> 
   "12.2 for Microsoft Windows (64-bit) (December 12, 2020)", StyleDefinitions -> 
   "PrivateStylesheetFormatting.nb"],
 ExpressionUUID->"0068b283-5296-4e9a-909d-6a8830b1cd95"

@@ -40,7 +40,7 @@ $ALASVersion:="ALAS v0.1, "<>$ALASTimestamp;
 
 
 (* ::Input::Initialization:: *)
-$ALASTimestamp="Wed 19 May 2021 19:34:07";
+$ALASTimestamp="Fri 21 May 2021 16:30:09";
 End[];
 
 
@@ -125,7 +125,7 @@ ASDLevelQuery["B",0,"units"->"cm-1","biblio"->False]
 
 
 (* ::Input::Initialization:: *)
-$ALASUserAgent="Atomic Levels And Spectra package, https://github.com/episanty/ALAS, version "<>$ALASVersion<>", running over the Wolfram HTTPClient on Mathematica "<>$Version;
+$ALASUserAgent="Atomic Levels And Spectra package, https://github.com/episanty/ALAS, version "<>$ALASVersion<>", running using the "<>("user-agent"/.HTTPRequest[""]["Headers"])<>" on Mathematica "<>$Version;
 
 
 (* ::Input::Initialization:: *)

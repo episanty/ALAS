@@ -40,7 +40,7 @@ $ALASVersion:="ALAS v0.1, "<>$ALASTimestamp;
 
 
 (* ::Input::Initialization:: *)
-$ALASTimestamp="Fri 21 May 2021 16:35:58";
+$ALASTimestamp="Wed 26 May 2021 17:36:37";
 End[];
 
 
@@ -194,6 +194,11 @@ EndPackage[];
 
 (* ::Input::Initialization:: *)
 DistributeDefinitions["ALAS`"];
+
+
+(* ::Input::Initialization:: *)
+$spectroscopicNotationSeries=Join[{"s","p","d","f"},CharacterRange["g","z"]];
+$SpectroscopicNotationSeries=ToUpperCase/@$shellNames;
 
 
 
